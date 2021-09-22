@@ -1,0 +1,7 @@
+apiVersion: producers.zoracloud.ai/v1beta1
+kind: Producer
+metadata:
+  name: producer-sample
+spec:
+  # Add fields here
+  foo: bar

@@ -1,0 +1,24 @@
+# permissions for end users to edit producers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: producer-editor-role
+rules:
+- apiGroups:
+  - producers.zoracloud.ai
+  resources:
+  - producers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - producers.zoracloud.ai
+  resources:
+  - producers/status
+  verbs:
+  - get
